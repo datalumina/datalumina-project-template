@@ -64,12 +64,16 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
     │
     ├── features.py             <- Code to create features for modeling
     │
+    │    
     ├── modeling                
     │   ├── __init__.py 
     │   ├── predict.py          <- Code to run model inference with trained models          
     │   └── train.py            <- Code to train models
     │
-    └── plots.py                <- Code to create visualizations 
+    │── plots.py                <- Code to create visualizations 
+    │
+    ├── services                <- Service classes to connect with external platforms, tools, or APIs
+        ├── __init__.py 
 ```
 
 --------
