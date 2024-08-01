@@ -89,5 +89,8 @@ target/
 # Exclude virtual environment
 .venv/
 
+# Exclude trained models
+/models/
+
 # exclude data from source control by default
 # /data/
