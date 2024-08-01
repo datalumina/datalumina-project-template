@@ -72,8 +72,8 @@ This command creates a copy of `.env.example` and names it `.env`, allowing you 
     │
     ├── plots.py                <- Code to create visualizations 
     │
-    ├── services                <- Service classes to connect with external platforms, tools, or APIs
-        ├── __init__.py 
+    └── services                <- Service classes to connect with external platforms, tools, or APIs
+        └── __init__.py 
 ```
 
 --------
