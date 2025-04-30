@@ -9,7 +9,7 @@ This project template is a simplified version of the [Cookiecutter Data Science]
 
 ## Adjusting .gitignore
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+Ensure you adjust the `.gitignore` file according to your project needs. For example, to exclude data files from source control, remove the hash at the beginning of the line to add '/data' to your .gitignore-file.
 
 ```plaintext
 # exclude data from source control by default
