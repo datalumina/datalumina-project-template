@@ -1,74 +1,107 @@
-# Data Project Template
+# 📚 Student Grade Tracker
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+A command line application that manages students, courses, and grades. Built in Python using object-oriented programming.
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+---
 
-## Adjusting .gitignore
+## 📋 Overview
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+This app lets you add students, enroll them in courses, record their grades, and view averages — all from the terminal. Data is saved to a JSON file so nothing is lost when you close the app.
 
-```plaintext
-# exclude data from source control by default
-# /data/
+---
+
+## 📁 Project Structure
+
+```
+student-grade-tracker/
+│
+├── src/
+│   ├── student.py         # Student class
+│   ├── course.py          # Course class
+│   ├── gradebook.py       # Core logic
+│   └── utils.py           # Helper functions
+│
+├── data/
+│   └── students.json      # Saved student data
+│
+├── main.py                # Entry point / menu
+├── requirements.txt
+└── README.md
 ```
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+---
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+## 🚀 How to Run
 
+**1. Clone the repository**
 ```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
+git clone https://github.com/yourusername/student-grade-tracker.git
+cd student-grade-tracker
 ```
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+**2. Run the app**
+```bash
+python main.py
+```
 
+No external libraries needed — just Python 3!
 
-## Project Organization
+---
+
+## ✨ Features
+
+- Add and remove students
+- Create courses and enroll students
+- Record grades per course
+- View average grade per course
+- View overall GPA per student
+- Saves and loads data from JSON automatically
+
+---
+
+## 🧱 How It's Built
+
+The project is split into 4 classes:
+
+| File | Class | Responsibility |
+|---|---|---|
+| student.py | `Student` | Stores name, ID, and grades per course |
+| course.py | `Course` | Stores enrolled students, calculates class average |
+| gradebook.py | `Gradebook` | Manages all students and courses, handles saving/loading |
+| utils.py | — | Converts grades to letters, calculates GPA |
+
+---
+
+## 📊 Example Output
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- The top-level README for developers using this project
-├── data
-│   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
+==== Student Grade Tracker ====
+1. Add Student
+2. Add Course
+3. Enroll Student
+4. Add Grade
+5. View Student Report
+6. Exit
+
+Enter choice: 5
+
+Student: Alice Johnson (S001)
+  Math:     Average: 88.5  (B)
+  English:  Average: 85.25 (B)
+  Science:  Average: 88.75 (B)
+Overall GPA: 87.5 (B+)
 ```
+
+---
+
+## 🛠️ Technologies Used
+
+- **Python 3**
+- **JSON** — for data storage
+- **OOP** — classes and methods throughout
+
+---
+
+## 👤 Author
+
+Gurnoor Pannu — [GitHub](https://github.com/Gpannu77)
